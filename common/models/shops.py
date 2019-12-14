@@ -1,25 +1,31 @@
 from django.db import models
             
 
-class Users(models.Model):
+class Shops(models.Model):
     id = models.IntegerField()
-    email = models.CharField(max_length=255)
-    display_name = models.CharField(max_length=255)
-    password = models.CharField(max_length=255)
-    sex = models.CharField(max_length=1)
-    date_of_birth = models.DateTimeField()
-    grade_id = models.IntegerField()
+    shop_type = models.CharField(max_length=1)
     prefecture_id = models.IntegerField()
     area_id = models.IntegerField()
     address = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     name_kana = models.CharField(max_length=255)
+    sub_name = models.CharField(max_length=255)
+    display_name = models.CharField(max_length=255)
+    manager_name = models.CharField(max_length=255)
+    manager_name_kana = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=255)
-    image_path = models.CharField(max_length=255)
-    about_me = models.TextField()
+    mobile_number = models.CharField(max_length=255)
+    fax_number = models.CharField(max_length=255)
+    main_image_path = models.CharField(max_length=255)
+    sub_image_path = models.CharField(max_length=255)
+    explain_first = models.TextField()
+    explain_second = models.TextField()
+    explain_third = models.TextField()
+    grade_id = models.IntegerField()
     settlement_id = models.IntegerField()
-    evaluate_id = models.IntegerField()
-    info_mail_flg = models.CharField(max_length=1)
+    rate_average = info_mail_flg = models.CharField(max_length=1)
     mail_magazine_flg = models.CharField(max_length=1)
     push_alert_flg = models.CharField(max_length=1)
     restriction_flg = models.CharField(max_length=1)
@@ -27,13 +33,9 @@ class Users(models.Model):
     phone_certificated_flg = models.CharField(max_length=1)
     mail_certificate_date = models.DateTimeField()
     phone_certificate_date = models.DateTimeField()
-    recent_login_date = models.DateTimeField()
-    recent_login_ip = models.CharField(max_length=255)
-    recent_login_device = models.CharField(max_length=255)
-    recent_login_os_version = models.CharField(max_length=255)
     del_flg = models.CharField(max_length=1)
     created_at = models.DateTimeField()
     modified_at = models.DateTimeField()
                             
     class Meta:
-        db_table = 'users'
+        db_table = 'shops'
