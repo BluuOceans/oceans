@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Notifications(models.Model):
-    id = models.IntegerField()
     type = models.CharField(max_length=1)
     user_id = models.IntegerField()
     pet_id = models.IntegerField()

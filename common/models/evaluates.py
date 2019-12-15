@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Evaluates(models.Model):
-    id = models.IntegerField()
     user_id = models.IntegerField()
     rate = shop_id = models.IntegerField()
     target_user_id = models.IntegerField()

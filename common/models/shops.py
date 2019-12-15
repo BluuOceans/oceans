@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Shops(models.Model):
-    id = models.IntegerField()
     shop_type = models.CharField(max_length=1)
     prefecture_id = models.IntegerField()
     area_id = models.IntegerField()

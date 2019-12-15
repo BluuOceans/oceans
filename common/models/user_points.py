@@ -2,7 +2,6 @@ from django.db import models
             
 
 class UserPoints(models.Model):
-    id = models.IntegerField()
     user_id = models.IntegerField()
     point_type = models.CharField(max_length=4)
     point_amount = models.IntegerField()

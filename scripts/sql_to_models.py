@@ -36,6 +36,8 @@ class SqlToModels:
                     if line.strip().startswith('`'):
                         word_list = line.strip().split(' ')
                         column_name = word_list[0].strip('`')
+                        if column_name =='id':
+                            continue
                         var = "{} = ".format(column_name)
                         if word_list[1].startswith('int') or word_list[1].startswith('bigint'):
                             var = var + """models.IntegerField()

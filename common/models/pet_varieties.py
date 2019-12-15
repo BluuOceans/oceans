@@ -2,7 +2,6 @@ from django.db import models
             
 
 class PetVarieties(models.Model):
-    id = models.IntegerField()
     name = models.CharField(max_length=255)
     name_kana = models.CharField(max_length=255)
     explain = models.TextField()

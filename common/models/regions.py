@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Regions(models.Model):
-    id = models.IntegerField()
     name = models.IntegerField()
     name_kana = models.IntegerField()
     del_flg = models.CharField(max_length=1)

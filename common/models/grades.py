@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Grades(models.Model):
-    id = models.IntegerField()
     div = models.CharField(max_length=1)
     name = models.CharField(max_length=255)
     name_kana = models.CharField(max_length=255)

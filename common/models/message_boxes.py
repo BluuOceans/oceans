@@ -2,7 +2,6 @@ from django.db import models
             
 
 class MessageBoxes(models.Model):
-    id = models.IntegerField()
     send_user_id = models.IntegerField()
     receive_user_id = models.IntegerField()
     title = models.CharField(max_length=255)

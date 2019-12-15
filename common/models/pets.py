@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Pets(models.Model):
-    id = models.IntegerField()
     user_id = models.IntegerField()
     pet_category_id = models.IntegerField()
     pet_variety_id = models.IntegerField()

@@ -2,7 +2,6 @@ from django.db import models
             
 
 class SettlementInfos(models.Model):
-    id = models.IntegerField()
     bank_id = models.IntegerField()
     branch_office_id = models.IntegerField()
     account = models.CharField(max_length=255)

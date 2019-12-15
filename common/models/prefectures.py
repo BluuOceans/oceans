@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Prefectures(models.Model):
-    id = models.IntegerField()
     region_id = models.IntegerField()
     name = models.IntegerField()
     name_kana = models.IntegerField()

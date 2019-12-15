@@ -2,7 +2,6 @@ from django.db import models
             
 
 class CareRequests(models.Model):
-    id = models.IntegerField()
     div = models.CharField(max_length=1)
     user_id = models.IntegerField()
     pet_id = models.IntegerField()

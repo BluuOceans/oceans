@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Banners(models.Model):
-    id = models.IntegerField()
     administrator_id = models.IntegerField()
     shop_id = models.IntegerField()
     board_type = models.IntegerField()

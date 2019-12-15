@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Settlements(models.Model):
-    id = models.IntegerField()
     settlement_info_id = models.IntegerField()
     settlement_at = models.DateTimeField()
     memo = models.CharField(max_length=255)

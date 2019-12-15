@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Comments(models.Model):
-    id = models.IntegerField()
     board_id = models.IntegerField()
     user_id = models.IntegerField()
     title = models.CharField(max_length=255)

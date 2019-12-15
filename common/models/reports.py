@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Reports(models.Model):
-    id = models.IntegerField()
     user_id = models.IntegerField()
     target_user_id = models.IntegerField()
     shop_id = models.IntegerField()

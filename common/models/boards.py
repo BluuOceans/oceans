@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Boards(models.Model):
-    id = models.IntegerField()
     board_type = models.IntegerField()
     user_id = models.IntegerField()
     administrator_id = models.IntegerField()

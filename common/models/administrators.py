@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Administrators(models.Model):
-    id = models.IntegerField()
     grade_id = models.IntegerField()
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)

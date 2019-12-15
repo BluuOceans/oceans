@@ -2,7 +2,6 @@ from django.db import models
             
 
 class Areas(models.Model):
-    id = models.IntegerField()
     prefecture_id = models.IntegerField()
     name = models.IntegerField()
     name_kana = models.IntegerField()
