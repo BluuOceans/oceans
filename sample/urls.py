@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sample.views import sample
+from sample.views import map
 
 urlpatterns = [
     path(r'sample', sample.SampleView.as_view(), name='sample'),
+    path(r'map', map.MapView.as_view(), name='map'),
 ]

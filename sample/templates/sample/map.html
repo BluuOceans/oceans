@@ -2,9 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>map</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+        .mapDiv{
+            height: 500px;
+            width:  600px;
+            float: left;
+
+        }
+        .mapTop{
+            height: 100px;
+        }
+        .mapFoot{
+            height: 100px;
+        }
+        .mapInfo{
+            background-color: cornflowerblue;
+            width: 600px;
+            height: 100%;
+
+        }
+        .leftDiv{
+            height: 500px;
+            width: 200px;
+            background-color: hotpink;
+            float: left;
+        }
+        .rightDiv{
+            height: 500px;
+            width: 200px;
+            background-color: darkcyan;
+            float: left;
+        }
+    </style>
+    <script>
+      var map;
+      // Initialize and add the map
+      function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 35.707353, lng: 139.751244};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 12, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+      }
+
+
+    </script>
+    <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQuFvH3ez_L3ZtapJLJOPy-frT0aUTD20&callback=initMap">
+</script>
 </head>
 <body>
+    <div class="mapTop"></div>
+    <div class="centerDiv">
+        <div class="leftDiv"></div>
+        <div class="mapDiv">
+            <div id="map" ></div>
+            <div class="mapInfo">
+                <!--  점포 정보 리스트 출력 -->
+                <div>
+                    店舗名
+
+                </div>
+            </div>
+        </div>
+        <div class="rightDiv"></div>
+    </div>
+
+
 
 </body>
 </html>
